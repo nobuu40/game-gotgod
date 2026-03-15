@@ -1,0 +1,30 @@
+# Space Scene for Space Exploration and Flight Mechanics
+
+This scene is designed to facilitate space exploration and include flight mechanics for the game. The scene will feature:
+
+- **Spaceship Controls**: Allow players to control their spaceship with intuitive mechanics.
+- **Asteroids & Planets**: Populate the scene with asteroids and planets for exploration.
+- **Space Environment**: Create a vast space environment that simulates zero gravity.
+- **Dynamic Lighting**: Implement dynamic lighting that changes based on the proximity of celestial bodies.
+
+## Components
+- **Spaceship**: A player-controlled spaceship that can navigate through the environment.
+- **Physics**: Rigidbody components to simulate realistic movement and flight.
+- **Exploration Mechanics**: Objectives for players to discover new planets or collect resources.
+
+## Script Examples
+```gdscript
+# Example GDScript for spaceship control
+extends KinematicBody2D
+
+var speed = 200
+
+func _process(delta):
+    var direction = Vector2.ZERO
+    if Input.is_action_pressed('ui_up'): direction.y -= 1
+    if Input.is_action_pressed('ui_down'): direction.y += 1
+    if Input.is_action_pressed('ui_left'): direction.x -= 1
+    if Input.is_action_pressed('ui_right'): direction.x += 1
+    direction = direction.normalized()
+    move_and_slide(direction * speed)
+```
