@@ -1,0 +1,2 @@
+# game-gotgod
+ads
