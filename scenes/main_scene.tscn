@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enemies.tscn" type="PackedScene" id=2]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=3]
+[ext_resource path="res://turn_manager.tscn" type="PackedScene" id=4]
+
+[node name="MainScene" type="Node"]
+
+# Player Node
+player = ExtResource(1)
+
+# Enemies Node
+enemies = ExtResource(2)
+
+# HUD Node
+hud = ExtResource(3)
+
+# Turn Manager Node
+turn_manager = ExtResource(4)
+
+# Add the nodes to the scene
+add_child(player)
+add_child(enemies)
+add_child(hud)
+add_child(turn_manager)
